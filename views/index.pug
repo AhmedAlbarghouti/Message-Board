@@ -1,17 +1,14 @@
 extends layout
-
+ 
 block content
     h2 #{title}
-   
+    a(href="/new") Post New Message
     each msg in messages
      div(class="message-container")
-            
             h4= msg.user
             h3= msg.text
             p= msg.added
 
-     button(class='edit') Edit
-     button(class='delete') Delete
 
 
     

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    h3 #{title}
+    form(action="/new" method="POST")
+        div(class="form-field")
+            label(for="name") Name
+            input(type="text" id="name" name="user" required)
+
+        div(class="form-field")
+            label(for="message") Message
+            input(type="text" id="message" name="message" required)
+        input(type="submit" value="Add Message")
+
+    
