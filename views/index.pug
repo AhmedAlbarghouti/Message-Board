@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    h2 #{title}
+   
+    each msg in messages
+     div(class="message-container")
+            
+            h4= msg.user
+            h3= msg.text
+            p= msg.added
+
+     button(class='edit') Edit
+     button(class='delete') Delete
+
+
+    
