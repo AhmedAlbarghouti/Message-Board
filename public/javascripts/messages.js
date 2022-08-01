@@ -1,4 +1,4 @@
-const messages = [
+let messages = [
     {
       text: "Hi there!",
       user: "Amando",

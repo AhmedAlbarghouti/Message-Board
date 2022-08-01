@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const messages = require('../public/javascripts/messages');
+let messages = require('../public/javascripts/messages');
 
 
 /* GET home page. */

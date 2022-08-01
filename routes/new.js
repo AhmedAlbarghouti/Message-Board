@@ -4,8 +4,6 @@ const messages = require('../public/javascripts/messages');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  console.log(req)
-  
   res.render('form', { title: 'Create New Message:' });
 });
 
@@ -15,8 +13,9 @@ router.post('/', (req,res) =>{
     user: req.body.user,
     added: new Date()
   }
-  messages.push(newMessage);
-  res.render('index', { title: 'Current Messages:', messages: messages });
+  messages.unshift(newMessage);
+  res.redirect('/');
+  
 })
 
 module.exports = router;
